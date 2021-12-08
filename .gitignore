@@ -10,7 +10,7 @@ dist
 coverage
 storybook-static
 .rpt2_cache
-# .vscode
+.vscode
 
 # misc
 .DS_Store

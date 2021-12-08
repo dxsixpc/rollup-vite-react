@@ -1,6 +1,6 @@
 {
   "name": "@21epub/epub-thirdparty",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "epub-thirdparty",
   "author": "dxsixpc",
   "license": "MIT",
@@ -9,21 +9,10 @@
     "type": "git",
     "url": "git+https://github.com/21epub/epub-thirdparty.git"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.modern.js",
-  "source": "src/index.ts",
   "keywords": [
     "thirdparty"
   ],
-  "scripts": {
-    "deploy": "sh deploy.sh"
-  },
-  "dependencies": {
-
-  },
-  "devDependencies": {
-  },
-  "files": [
-    "dist"
-  ]
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
 }
