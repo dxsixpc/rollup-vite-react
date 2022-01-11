@@ -1,6 +1,6 @@
 {
   "name": "@21epub/epub-thirdparty",
-  "version": "0.0.3",
+  "version": "0.0.4-alpha.5",
   "description": "epub-thirdparty",
   "author": "dxsixpc",
   "license": "MIT",
@@ -9,10 +9,26 @@
     "type": "git",
     "url": "git+https://github.com/21epub/epub-thirdparty.git"
   },
+  "main": "dist/index.js",
+  "source": "src/index.ts",
+  "module": "dist/index.modern.js",
   "keywords": [
     "thirdparty"
   ],
-  "scripts": {},
-  "dependencies": {},
-  "devDependencies": {}
+  "scripts": {
+    "start": "parcel src/index.ts",
+    "build": "microbundle-crl --no-compress --format modern,cjs"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "microbundle-crl": "^0.13.11"
+  },
+  "files": [
+    "dist",
+    "thirdparty"
+  ]
 }
