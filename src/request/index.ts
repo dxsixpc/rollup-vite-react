@@ -1,10 +1,12 @@
 import axios from 'axios';
-import type { AxiosError } from 'axios';
+import type { AxiosResponse, AxiosError } from 'axios';
 
 export interface ErrorMessageType {
   error: AxiosError;
+  // 默认返回信息
+  response?: AxiosResponse<any>;
   // 状态码
-  status: keyof typeof codeMessage;
+  status?: keyof typeof codeMessage;
   // 报错返回的提示内容
   message: string;
   // 自定义状态码提示
@@ -14,7 +16,9 @@ export interface ErrorMessageType {
 }
 
 // 创建axios实例
-export const request = axios.create();
+export const request = axios.create({
+  timeout: 10000,
+});
 
 // 自定义状态码提示
 const codeMessage = {
@@ -41,7 +45,8 @@ export const getErrorMsg = (error: AxiosError): ErrorMessageType => {
   return {
     error,
     status,
-    message: JSON.stringify(error?.response?.data),
+    response: error?.response,
+    message: String(error?.response?.data) || '接口错误',
     codeMessage: codeMessage[status],
     statusText: error?.response?.statusText,
   };
