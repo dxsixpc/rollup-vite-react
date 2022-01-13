@@ -1,5 +1,6 @@
 import axios from 'axios';
 import type { AxiosResponse, AxiosError } from 'axios';
+import { toString } from 'lodash';
 
 export interface ErrorMessageType {
   error: AxiosError;
@@ -46,7 +47,7 @@ export const getErrorMsg = (error: AxiosError): ErrorMessageType => {
     error,
     status,
     response: error?.response,
-    message: String(error?.response?.data) || '接口错误',
+    message: toString(error?.response?.data) || '接口错误',
     codeMessage: codeMessage[status],
     statusText: error?.response?.statusText,
   };
