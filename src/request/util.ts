@@ -25,7 +25,8 @@ export const codeMessage = {
 export const dataToString = (value: any): string => {
   let str = '';
   try {
-    if (toString(value) === '[object Object]') str = JSON.stringify(value);
+    str = toString(value);
+    if (str === '[object Object]') str = JSON.stringify(value);
   } catch {
     return value;
   }
