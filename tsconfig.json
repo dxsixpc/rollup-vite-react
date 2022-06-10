@@ -7,9 +7,11 @@
     "noImplicitAny": true,
     "module": "es6",
     "moduleResolution": "node",
-    "target": "es2015",
+    // 避免代码冗余，减少重复代码
+    "importHelpers": true,
+    // 希望将输出的代码转为 ES5
+    "target": "es5",
     "allowJs": true,
-    "jsx": "react",
     "allowSyntheticDefaultImports": true
   },
   "include": ["./src/**/*"]
