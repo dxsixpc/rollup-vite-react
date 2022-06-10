@@ -2,8 +2,16 @@ import axios from 'axios';
 import type { AxiosError } from 'axios';
 import { getErrorMsg } from './util';
 
+// 创建axios实例
+export const request = axios.create();
 
-export const request = axios;
+axios.defaults.headers.post = {
+  'Content-type': 'application/x-www-form-urlencoded',
+};
+
+// application/x-www-form-urlencoded
+// multipart/form-data
+// application/json
 
 // 响应拦截，对报错做统一处理
 request.interceptors.response.use(

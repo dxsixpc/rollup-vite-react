@@ -11,6 +11,7 @@ coverage
 storybook-static
 .rpt2_cache
 .vscode
+.parcel-cache
 
 # misc
 .DS_Store
@@ -21,7 +22,6 @@ storybook-static
 .env.production.local
 
 #others
-
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

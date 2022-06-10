@@ -2,8 +2,12 @@ import { toString } from 'lodash';
 import type { AxiosError } from 'axios';
 import type { ErrorMessageType } from './type';
 
+interface CodeMessageType {
+  [code: number]: string;
+}
+
 // 自定义状态码提示
-export const codeMessage = {
+export const codeMessage: CodeMessageType = {
   200: '服务器成功返回请求的数据。',
   201: '新建或修改数据成功。',
   202: '一个请求已经进入后台排队（异步任务）。',
