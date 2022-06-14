@@ -1,39 +1,48 @@
 {
-  "name": "@21epub/epub-thirdparty",
-  "version": "0.0.17",
-  "description": "epub-thirdparty",
+  "name": "@dxsixpc/rollup-react",
+  "version": "0.0.1",
+  "description": "@dxsixpc/rollup-react",
   "author": "dxsixpc",
   "license": "MIT",
-  "homepage": "https://github.com/21epub/epub-thirdparty",
+  "homepage": "https://github.com/dxsixpc/rollup-react",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/21epub/epub-thirdparty.git"
+    "url": "git+https://github.com/dxsixpc/rollup-react.git"
   },
   "main": "dist/index.js",
-  "source": "src/index.ts",
+  "source": "src/index.tsx",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "keywords": [
-    "thirdparty"
+    "rollup",
+    "react"
   ],
   "scripts": {
     "start": "vite",
     "build": "rollup -c"
   },
   "dependencies": {
+    "@21epub/epub-form-components": "^0.5.9",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
     "axios": "^0.27.2",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "react": "^16",
+    "react-dom": "^16"
   },
   "devDependencies": {
-    "@babel/core": "^7.18.2",
-    "@babel/plugin-transform-runtime": "^7.18.2",
+    "@babel/core": "^7.18.5",
+    "@babel/plugin-transform-runtime": "^7.18.5",
     "@rollup/plugin-eslint": "^8.0.2",
-    "@rollup/plugin-typescript": "^8.3.2",
+    "@rollup/plugin-typescript": "^8.3.3",
     "@types/lodash": "^4.14.182",
+    "@types/react": "^16",
+    "@types/react-dom": "^16",
     "@types/rollup-plugin-json": "^3.0.3",
-    "@typescript-eslint/eslint-plugin": "^5.27.1",
-    "@typescript-eslint/parser": "^5.27.1",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "@vitejs/plugin-react": "^1.3.2",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.7.0",
     "eslint-plugin-sonarjs": "^0.13.0",
@@ -45,10 +54,9 @@
     "rollup-plugin-node-resolve": "^5.2.0",
     "tslib": "^2.4.0",
     "typescript": "^4.7.3",
-    "vite": "^2.9.10"
+    "vite": "^2.9.12"
   },
   "files": [
-    "dist",
-    "thirdparty"
+    "dist"
   ]
 }

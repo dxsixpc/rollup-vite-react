@@ -5,14 +5,24 @@
     "strict": true,
     "noImplicitReturns": true,
     "noImplicitAny": true,
-    "module": "es6",
+    "module": "ESNext",
     "moduleResolution": "node",
     // 避免代码冗余，减少重复代码
     "importHelpers": true,
-    // 希望将输出的代码转为 ES5
-    "target": "es5",
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true
+    // 希望将输出的代码转为 最新es模块
+    "target": "ESNext",
+    "allowJs": false,
+    "jsx": "react-jsx",
+    "allowSyntheticDefaultImports": true,
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    // 强制文件名中的大小写一致
+    "forceConsistentCasingInFileNames": true,
+    // 解析json模块
+    "resolveJsonModule": true,
+    "isolatedModules": true
   },
   "include": ["./src/**/*"]
 }
