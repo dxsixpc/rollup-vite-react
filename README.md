@@ -1,8 +1,8 @@
-# epub-thirdparty
+# rollup-vite-react
 
 ## Intro
 
-This is a thirdparty for epub.
+study rollup-vite-react
 
 ## License
 
