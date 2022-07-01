@@ -1,22 +1,16 @@
 import clear from 'rollup-plugin-clear';
-import commonjs from 'rollup-plugin-commonjs';
-import json from 'rollup-plugin-json';
-import resolve from 'rollup-plugin-node-resolve';
-import babel from 'rollup-plugin-babel';
+import commonjs from '@rollup/plugin-commonjs';
+import json from '@rollup/plugin-json';
 import eslint from '@rollup/plugin-eslint';
 import typescript from '@rollup/plugin-typescript';
-import path from 'path';
-import fs from 'fs';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+import { babel } from '@rollup/plugin-babel';
 
-const extensions = ['.ts', '.tsx', '.js', '.jsx'];
-const inputPath = path.resolve('src');
 const outputDir = 'dist';
 
 export default {
   // 输入配置
-  input: extensions
-    .map((ext) => path.resolve(inputPath, `index${ext}`))
-    .find((file) => fs.existsSync(file)),
+  input: 'src/index.tsx',
   // 输出配置
   output: [
     // 打包为commonJS模块
@@ -50,7 +44,7 @@ export default {
       declarationDir: outputDir,
     }),
     // 允许加载外部模块
-    resolve(),
+    nodeResolve(),
     // 将commonjs转为es2015供 Rollup 处理
     commonjs(),
     // 将es2015转为es5
